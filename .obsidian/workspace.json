@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "c3a3b8654a0232b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "e476b791eab07908",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "883bc39cddfed75d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intro cours/CDC Kayouno.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CDC Kayouno"
+            }
+          },
+          {
+            "id": "47844a97fb82e587",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cours/SQL/SQL RAPPEL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL RAPPEL"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b3d8aaf717cf59e",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c327b168cd6a89b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de34936522f29625",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "96c08ef1514639b4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": " ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4be6e512827a6df4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "4734e0568893b899",
+    "type": "split",
+    "children": [
+      {
+        "id": "143eb0dd4933b3a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df370bd6e92142dd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Intro cours/Cahier des charges_nathan_leo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Cahier des charges_nathan_leo"
+            }
+          },
+          {
+            "id": "614f57f63a65cc38",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Intro cours/Cahier des charges_nathan_leo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Cahier des charges_nathan_leo"
+            }
+          },
+          {
+            "id": "009b34fd405b3f45",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e6cce7179afbf3e8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Intro cours/Cahier des charges_nathan_leo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Cahier des charges_nathan_leo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "47844a97fb82e587",
+  "lastOpenFiles": [
+    "Pasted image 20250916161757.png",
+    "Pasted image 20250916161556.png",
+    "Pasted image 20250916161521.png",
+    "Pasted image 20250916161359.png",
+    "Pasted image 20250916161140.png",
+    "Pasted image 20250916160621.png",
+    "Pasted image 20250916160545.png",
+    "Pasted image 20250916151605.png",
+    "Pasted image 20250916144043.png",
+    "Pasted image 20250916142830.png",
+    "Pasted image 20250916141938.png",
+    "Cours/Conterisation/Cours 1.md",
+    "Cours/SQL/SQL RAPPEL.md",
+    "Cours/SQL",
+    "Cours/Conterisation/Cours 2VM.md",
+    "Cours/Conterisation/IA.md",
+    "Cours/Intro cours/Untitled.md",
+    "Cours/Conterisation",
+    "Cours",
+    "Entreprise/Cahier des charges – CRM GC Développement.md",
+    "Cours/Intro cours/CDC Kayouno.md",
+    "Untitled.canvas",
+    "Cours/Intro cours/Crazy Dev.md",
+    "Cours/Intro cours/info Kayouno.md",
+    "Intro cours/Cahier des charges_nathan_leo.md",
+    "Untitled.md",
+    "Entreprise",
+    "Welcome.md",
+    "Cours/Intro cours"
+  ]
+}
