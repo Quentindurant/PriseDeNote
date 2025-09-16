@@ -25,18 +25,28 @@
             "id": "47844a97fb82e587",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Cours/SQL/SQL RAPPEL.md",
-                "mode": "source",
-                "source": false
+                "file": "Cours/SQL/Pasted image 20250916122815.png"
               },
-              "icon": "lucide-file",
-              "title": "SQL RAPPEL"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250916122815"
+            }
+          },
+          {
+            "id": "c0887e3f2b9514b4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Cours/Conterisation/Pasted image 20250915141611.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250915141611"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -184,21 +194,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "47844a97fb82e587",
+  "active": "de34936522f29625",
   "lastOpenFiles": [
-    "Pasted image 20250916161757.png",
-    "Pasted image 20250916161556.png",
-    "Pasted image 20250916161521.png",
-    "Pasted image 20250916161359.png",
-    "Pasted image 20250916161140.png",
-    "Pasted image 20250916160621.png",
-    "Pasted image 20250916160545.png",
-    "Pasted image 20250916151605.png",
-    "Pasted image 20250916144043.png",
-    "Pasted image 20250916142830.png",
-    "Pasted image 20250916141938.png",
-    "Cours/Conterisation/Cours 1.md",
+    "Cours/Conterisation/Pasted image 20250915111054.png",
+    "Cours/Conterisation/Pasted image 20250915100756.png",
+    "Cours/Conterisation/Pasted image 20250915095734.png",
+    "Cours/Conterisation/Pasted image 20250915092033.png",
+    "Cours/Conterisation/Pasted image 20250915091851.png",
+    "Cours/SQL/Pasted image 20250916122815.png",
+    "Cours/SQL/Pasted image 20250916122924.png",
+    "Cours/Conterisation/Pasted image 20250915141611.png",
+    "Cours/SQL/Pasted image 20250916140443.png",
+    "Cours/SQL/Pasted image 20250916141938.png",
+    "Cours/SQL/Pasted image 20250916161757.png",
     "Cours/SQL/SQL RAPPEL.md",
+    "Cours/Conterisation/Cours 1.md",
     "Cours/SQL",
     "Cours/Conterisation/Cours 2VM.md",
     "Cours/Conterisation/IA.md",
