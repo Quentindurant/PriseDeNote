@@ -225,3 +225,62 @@ Seulement les lignes qui sont en relation entre **A** et **B**.
 	INNER JOIN language AS B 
 	ON A.language_id = B.language_id;
 	« Affiche les films avec leur langue » → un film sans langue ne doit pas apparaître.
+
+
+
+
+REQUETE DE BASE :
+
+### Jouer avec les bases de données
+
+- `SHOW DATABASES` : Permet de voir la liste des BDD
+- `CREATE DATABASE <name>` : Permet de créer une BDD
+- `USE <database>` : Permet de "rentrer" dans une BDD en CLI pour interagir avec
+- `DROP DATABASE <name>` : Permet de supprimer une BDD
+
+### Jouer avec les tables
+
+- `CREATE TABLE <table>` : Permet de créer une table
+- `ALTER TABLE <table>` : Permet de MAJ une table
+- `DROP TABLE <table>` : Permet de supprimer une table
+- `SHOW TABLES` : Permet de voir la liste des tables
+- `DESCRIBE <table>` : Permet de décrire les colonnes d'une table
+- `TRUNCATE <table>` : Supprime les données dans une table
+
+### Jouer avec les données
+
+- `INSERT INTO <table> (colonne1, colonne2, ...) VALUES ('valeur 1', 'valeur 2', ...)` : Permet d'insérer des données dans une table
+- `UPDATE <table> SET colonne1 = 'nouvelle valeur' WHERE ...` : Permet de mettre à jour des données dans une table
+- `DELETE FROM <table> WHERE ....` : Permet de supprimer des données dans une table
+
+## TP 3
+
+- Sélectionner tous les employés : SELECT * FROM employees;
+- Sélectionner tous les employés par leurs noms et prénoms : SELECT first_name, last_name FROM employees;
+- Sélectionner les noms distincts des employés : SELECT DISTINCT last_name FROM employees;
+- Sélectionner les noms et prénoms distincts des employés : SELECT DISTINCT last_name , first_name FROM employees;
+- Sélectionner les noms et prénoms des employés dont le nom est « alencar » : SELECT first_name, last_name FROM employees WHERE last_name = 'alencar';
+- Sélectionner les employés dont le nom est « alencar » et de sexe masculin : SELECT last_name, gender FROM employees WHERE last_name = 'alencar' AND gender = 'M';
+- Sélectionner les employés dont le prénom « Danai » ou « Leen » en utilisant « OR » : SELECT first_name FROM employees WHERE first_name ='Danai' OR first_name ='Leen';
+- Sélectionner les employés dont le prénom « Danai » ou « Leen » en utilisant « IN » : SELECT first_name FROM employees WHERE first_name IN ('Danai','Leen');
+- Sélectionner les employés dont le nom est « alencar » et le prénom « Danai » ou « Leen » en utilisant « OR » : SELECT first_name, last_name FROM employees WHERE last_name = 'alencar' AND (first_name = 'Danai' OR first_name = 'Leen');
+- Sélectionner les employés dont le nom est « alencar » et le prénom « Danai » ou « Leen » en utilisant « IN » : SELECT first_name, last_name FROM employees WHERE first_name IN ('Danai','Leen') AND last_name = 'alencar';
+
+- Sélectionner les employés dont le numéro d’employé est compris entre 50000 et 50150 : SELECT emp_no FROM `employees` WHERE emp_no > 50000 AND emp_no < 50150;
+- Sélectionner les employés dont le nom est « alencar » et le numéro d’employé est compris entre 50000 et 60000 : SELECT emp_no, last_name FROM `employees` WHERE last_name = 'alencar' AND emp_no > 50000 AND emp_no < 60000; OU SELECT emp_no, last_name FROM employees WHERE last_name = 'alencar'
+  AND emp_no BETWEEN 50001 AND 60000;
+- Sélectionner les employés dont le nom est « alencar » et le prénom est « danai » ou le numéro d’employé est compris entre 50000 et 60000 : SELECT emp_no, last_name, first_name FROM employees WHERE last_name = 'alencar' AND first_name = 'danai' OR emp_no BETWEEN 50001 AND 60000 
+- Sélectionner les employés dont le nom est « alencar » ou, le prénom est « danai » ou « leen » et le numéro d’employé est compris entre 50000 et 60000 : SELECT emp_no, first_name, last_name FROM employees WHERE last_name = 'alencar' OR (first_name IN ('Danai', 'Leen') AND emp_no BETWEEN 50000 AND 60000);
+
+- Sélectionner les employés dont le prénom commence par un « T » : SELECT emp_no, first_name FROM employees WHERE first_name LIKE 'T%';
+- Sélectionner les employés masculin dont la deuxième lettre du prénom est un « T » : SELECT emp_no, first_name, gender FROM employees WHERE gender = 'M' AND first_name LIKE '_T%'
+- Sélectionner les employés dont le nom est « alencar » et le prénom « danai » ou le numéro d’employé commence par un 5 : SELECT emp_no, first_name, last_name FROM employees WHERE last_name = 'alencar' AND (first_name = 'Danai' OR emp_no LIKE '5%');
+- Sélectionner les employés dont le prénom commence par un « T » et termine par un « B » : SELECT emp_no, first_name FROM employees WHERE first_name LIKE 'T%B';
+- Sélectionner les employés dont le prénom commence par un « T », la 3ème lettre est un « R » : SELECT emp_no, first_name FROM employees WHERE first_name LIKE 'T_R%';
+- Sélectionner les employés dont le prénom commence par un « T », la 3ème lettre est un « R » et le numéro d’employé est compris entre 50000 et 60000 : SELECT emp_no, first_name FROM employees WHERE first_name LIKE 'T_R%' AND emp_no BETWEEN 50000 AND 60000;
+- Sélectionner les employés dont le prénom contient « TZV » : SELECT emp_no, first_name FROM employees WHERE first_name LIKE '%TZV%';
+- Sélectionner les employés masculin ou dont le numéro d’employé est compris entre 50000 et 60000 et, le prénom contient « TZV » : SELECT emp_no, first_name, gender FROM employees WHERE gender = 'M' OR (emp_no BETWEEN 50000 AND 60000 AND first_name LIKE '%TZV%');
+- Sélectionner les employés dont le prénom termine par « CAL» SELECT emp_no, first_name FROM employees WHERE first_name LIKE '%CAL';
+- Sélectionner les employés dont le prénom termine par « CAL» de genre masculin et dont le numéro d’employé est compris entre 50000 et 60000 : SELECT emp_no, first_name, gender FROM employees WHERE first_name LIKE '%CAL' AND gender = 'M' AND emp_no BETWEEN 50000 AND 60000;
+- Sélectionner les employés dont le prénom est « danai » ou « leen » et le nom se termine par « TH» ou dont le numéro d’employé est compris entre 50000 et 100000 : SELECT emp_no, first_name, last_name FROM employees WHERE (first_name IN ('Danai', 'Leen') AND last_name LIKE '%TH') OR emp_no BETWEEN 50000 AND 100000;
+- Sélectionner les employés dont la date de naissance est null : SELECT emp_no, first_name, last_name, birth_date FROM employees WHERE birth_date IS NULL;
