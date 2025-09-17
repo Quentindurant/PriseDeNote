@@ -155,7 +155,7 @@ Table B :
 └─────-┘
 
 
-# SQL JOINS — Récapitulatif visuel
+# SQL JOINS — Récapitulatif visuel (Inclue le TP 2)
 
 
 ## LEFT JOIN inclusive
@@ -164,6 +164,7 @@ Toutes les lignes de la table **A** avec les lignes non null  en relation de la 
 	SELECT * FROM film AS A 
 	LEFT JOIN language AS B 
 	ON A.language_id = B.language_id;
+	
 
 ---
 
@@ -223,3 +224,4 @@ Seulement les lignes qui sont en relation entre **A** et **B**.
 	SELECT * FROM film AS A 
 	INNER JOIN language AS B 
 	ON A.language_id = B.language_id;
+	« Affiche les films avec leur langue » → un film sans langue ne doit pas apparaître.
