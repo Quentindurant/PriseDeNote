@@ -37,12 +37,14 @@
             "id": "c0887e3f2b9514b4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Cours/Conterisation/Pasted image 20250915141611.png"
+                "file": "Cours/SQL/SQL RAPPEL.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250915141611"
+              "icon": "lucide-file",
+              "title": "SQL RAPPEL"
             }
           }
         ],
@@ -194,8 +196,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "de34936522f29625",
+  "active": "c0887e3f2b9514b4",
   "lastOpenFiles": [
+    "Cours/Conterisation/Pasted image 20250915141611.png",
     "Cours/Conterisation/Pasted image 20250915111054.png",
     "Cours/Conterisation/Pasted image 20250915100756.png",
     "Cours/Conterisation/Pasted image 20250915095734.png",
@@ -203,7 +206,6 @@
     "Cours/Conterisation/Pasted image 20250915091851.png",
     "Cours/SQL/Pasted image 20250916122815.png",
     "Cours/SQL/Pasted image 20250916122924.png",
-    "Cours/Conterisation/Pasted image 20250915141611.png",
     "Cours/SQL/Pasted image 20250916140443.png",
     "Cours/SQL/Pasted image 20250916141938.png",
     "Cours/SQL/Pasted image 20250916161757.png",

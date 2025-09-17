@@ -161,39 +161,65 @@ Table B :
 ## LEFT JOIN inclusive
 ![LEFT JOIN inclusive](Pasted%20image%2020250916161140.png)  
 Toutes les lignes de la table **A** avec les lignes non null  en relation de la table **B**.
+	SELECT * FROM film AS A 
+	LEFT JOIN language AS B 
+	ON A.language_id = B.language_id;
 
 ---
 
 ## LEFT JOIN exclusive
 ![LEFT JOIN exclusive](Pasted%20image%2020250916160545.png)  
 Toutes les lignes de la table **A** (dont les FK null de la table B) qui ne sont pas en relation avec la table **B**.
+	SELECT * FROM film AS A
+	LEFT JOIN language AS B 
+	ON A.language_id = B.language_id 
+	WHERE A.language_id IS NULL;
 
 ---
 
 ## RIGHT JOIN inclusive
 ![RIGHT JOIN inclusive](Pasted%20image%2020250916160621.png)  
 Toutes les lignes de la table **B** avec les lignes non null  en relation de la table **A**.
+	SELECT * FROM film AS A 
+	RIGHT JOIN language AS B 
+	ON A.language_id = B.language_id;
 
 ---
 
 ## RIGHT JOIN exclusive
 ![RIGHT JOIN exclusive](Pasted%20image%2020250916161359.png)  
 Toutes les lignes de la table **B** (dont les FK null de la table B) qui ne sont pas en relation avec la table **A**.
+	SELECT * FROM film AS A
+	RIGHT JOIN language AS B 
+    ON A.language_id = B.language_id 
+	WHERE A.language_id IS NULL;
 
 ---
 
 ## FULL OUTER JOIN inclusive
 ![FULL OUTER JOIN inclusive](Pasted%20image%2020250916161521.png)  
 Toutes les lignes des tables **A** et **B**, qu’elles soient en relation ou non.
+	SELECT * FROM film AS A 
+	OUTER JOIN language AS B 
+	ON A.language_id = B.language_id; 
+	(ne fonctionne pas car outer est inconnu en mysql)
 
 ---
 
 ## FULL OUTER JOIN exclusive
 ![FULL OUTER JOIN exclusive](Pasted%20image%2020250916161556.png)  
 Toutes les lignes des tables **A** et **B**, sauf celles qui sont en relation (pas l’intersection).
+	SELECT * FROM film AS A 
+	OUTER JOIN language AS B 
+	ON A.language_id = B.language_id; 
+	WHERE A.language_id IS NULL;
+	(ne fonctionne pas car outer est inconnu en mysql)
 
 ---
 
 ## INNER JOIN
 ![INNER JOIN](Pasted%20image%2020250916161757.png)  
 Seulement les lignes qui sont en relation entre **A** et **B**.
+	SELECT * FROM film AS A 
+	INNER JOIN language AS B 
+	ON A.language_id = B.language_id;
