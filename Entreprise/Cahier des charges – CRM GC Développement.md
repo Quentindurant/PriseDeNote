@@ -1,5 +1,4 @@
 
-
 # 1. Contexte et objectifs
 
 Pourquoi développer un CRM maison plutôt que d’utiliser une solution existante ? Quels seraient les points différenciants par rapport à des solutions comme Zoho ?
@@ -130,3 +129,18 @@ Compte tenu de la spécificité de notre positionnement — entre le partenaire 
 - Suivi des contrats de maintenance (dates renouvellement, alertes expirations)
     
 - IA de pré-support (IA qui analyse la demande client et la clarifie/met rrapidement sur une piste de resolution)
+  
+  
+  ## Tableau des droits Simplifiée
+
+| Module            | Admin | Support | Commercial | ADV | Tech Interne | Tech Terrain | Chef Projet | Compta | Partenaire            |
+| ----------------- | ----- | ------- | ---------- | --- | ------------ | ------------ | ----------- | ------ | --------------------- |
+| **Clients**       | ✅     | 👁️     | ✅          | ✅   | 👁️          | 👁️          | 👁️         | 👁️    | ✅ Ses clients         |
+| **Tickets**       | ✅     | ✅       | 👁️        | 👁️ | ✅            | ✅            | 👁️         | ❌      | ✅ Ses tickets         |
+| **Commandes**     | ✅     | 👁️     | ✅          | ✅   | 👁️          | 👁️          | 👁️         | 👁️    | ✅ Ses commandes       |
+| **Planning**      | ✅     | 👁️     | 👁️        | ✅   | 👁️          | ✅ Personnel  | ✅           | ❌      | 👁️ Ses interventions |
+| **Interventions** | ✅     | 👁️     | 👁️        | ✅   | ✅ Support    | ✅ Terrain    | ✅           | ❌      | 👁️ Chez ses clients  |
+| **Staging/Stock** | ✅     | ❌       | ❌          | 👁️ | ✅            | ❌            | 👁️         | ❌      | ❌                     |
+| **Comptabilité**  | ✅     | ❌       | ❌          | ❌   | ❌            | ❌            | ❌           | ✅      | ❌                     |
+
+**Légende** : ✅ = CRUD complet, 👁️ = Lecture, ❌ = Aucun accès
