@@ -37,7 +37,7 @@
 - `git status` : Permet de voir l'état de la branche actuelle du repository local.
     
 - `git log` : Permet de voir l'historique des commits.
-    
+
 - `git branch` : Permet de lister les branches du repository local et de voir quelle est la branche active.
     
 - `git branch <nom>` : Permet de créer une branche nommée sur le repository local.
