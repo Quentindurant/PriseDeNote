@@ -25,34 +25,14 @@
             "id": "47844a97fb82e587",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Cours/SQL/Pasted image 20250916122815.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250916122815"
-            }
-          },
-          {
-            "id": "c0887e3f2b9514b4",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-<<<<<<< Updated upstream
-                "file": "Cours/GIT/Cours de GIT.md",
-=======
                 "file": "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
->>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< Updated upstream
-              "title": "Cours de GIT"
-=======
               "title": "COMPRENDRE LES ADVS mdr"
->>>>>>> Stashed changes
             }
           },
           {
@@ -70,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -218,38 +198,14 @@
       "command-palette:Open command palette": false
     }
   },
-<<<<<<< Updated upstream
-  "active": "c0887e3f2b9514b4",
-  "lastOpenFiles": [
-    "Cours/GIT/Cours de GIT.md",
-    "Cours/SQL/SQL RAPPEL.md",
-    "Cours/GIT",
-    "Entreprise/Cahier des charges – CRM GC Développement.md",
-    "Cours/Conception Logiciel/UML.md",
-    "Entreprise/Diagramme_Cas_Utilisation_CRMGC.drawio",
-    "Cours/Conception Logiciel/Pasted image 20250918101802.png",
-    "Cours/Conception Logiciel/Pasted image 20250918094520.png",
-    "Cours/Conception Logiciel/Pasted image 20250918093223.png",
-    "Cours/Conterisation/IA.md",
-    "Cours/Conterisation/Cours 2VM.md",
-    "Cours/Conterisation/Cours 1.md",
-    "Cours/Conception Logiciel/Pasted image 20250918094647.png",
-    "Cours/Conception Logiciel/Pasted image 20250918094557.png",
-    "Cours/Conception Logiciel/Pasted image 20250918092221.png",
-    "Cours/Conception Logiciel/Pasted image 20250918092737.png",
-    "Cours/Conception Logiciel/Pasted image 20250918092614.png",
-    "Cours/Conception Logiciel/Pasted image 20250918092342.png",
-    "Untitled.md",
-    "Cours/Conception Logiciel/Pasted image 20250918092305.png",
-    "Cours/Conception Logiciel",
-    "Cours/SQL",
-    "Cours/Intro cours/Untitled.md",
-    "Cours/Conterisation",
-    "Cours",
-    "Cours/Intro cours/CDC Kayouno.md",
-=======
   "active": "de34936522f29625",
   "lastOpenFiles": [
+    "Entreprise/Cahier des charges – CRM GC Développement.md",
+    "Doc/Datas to collect MLD.md",
+    "Doc/Datas to collect MCD.md",
+    "Doc/Cahier des charges – CRM GC Développement.md",
+    "Doc/COMPRENDRE LES ADVS mdr.md",
+    "Doc",
     "Entreprise/Synapse",
     "Entreprise/Synapse/Doc/Datas to collect MLD.md",
     "Untitled.md",
@@ -285,17 +241,11 @@
     "Entreprise/Synapse/Doc/Datas to collect MCD.md",
     "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
     "Entreprise/Synapse/Doc",
-    "Entreprise/Projet perso",
     "Entreprise/Synapse/Doc/Datas to collect MCD.md",
     "Entreprise/Synapse/Doc/Datas to collect MLD.md",
     "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
-    "Entreprise/Synapse/Doc",
     "Entreprise/Classe CRM.md",
->>>>>>> Stashed changes
     "Untitled.canvas",
-    "Intro cours/Cahier des charges_nathan_leo.md",
-    "Entreprise",
-    "Welcome.md",
-    "Cours/Intro cours"
+    "Intro cours/Cahier des charges_nathan_leo.md"
   ]
 }
