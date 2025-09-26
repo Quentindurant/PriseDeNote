@@ -39,12 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Cours/GIT/Cours de GIT.md",
+=======
+                "file": "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "Cours de GIT"
+=======
+              "title": "COMPRENDRE LES ADVS mdr"
+>>>>>>> Stashed changes
             }
           },
           {
@@ -210,6 +218,7 @@
       "command-palette:Open command palette": false
     }
   },
+<<<<<<< Updated upstream
   "active": "c0887e3f2b9514b4",
   "lastOpenFiles": [
     "Cours/GIT/Cours de GIT.md",
@@ -238,9 +247,52 @@
     "Cours/Conterisation",
     "Cours",
     "Cours/Intro cours/CDC Kayouno.md",
-    "Untitled.canvas",
-    "Cours/Intro cours/Crazy Dev.md",
+=======
+  "active": "de34936522f29625",
+  "lastOpenFiles": [
+    "Entreprise/Synapse",
+    "Entreprise/Synapse/Doc/Datas to collect MLD.md",
+    "Untitled.md",
+    "Entreprise/Diagramme_Cas_Utilisation_CRMGC.drawio",
+    "Cours/SQL/SQL RAPPEL.md",
+    "Cours/SQL/Pasted image 20250916161757.png",
+    "Cours/SQL/Pasted image 20250916161556.png",
+    "Cours/SQL/Pasted image 20250916161521.png",
+    "Cours/SQL/Pasted image 20250916161359.png",
+    "Cours/SQL/Pasted image 20250916161140.png",
+    "Cours/SQL/Pasted image 20250916160621.png",
+    "Cours/SQL/Pasted image 20250916160545.png",
+    "Cours/SQL/Pasted image 20250916151605.png",
+    "Cours/SQL/Pasted image 20250916144043.png",
+    "Cours/SQL/Pasted image 20250916142830.png",
+    "Cours/SQL",
     "Cours/Intro cours/info Kayouno.md",
+    "Cours/Intro cours/Untitled.md",
+    "Cours/Intro cours/Crazy Dev.md",
+    "Cours/Intro cours/CDC Kayouno.md",
+    "Cours/Intro cours",
+    "Cours/GIT/Cours de GIT.md",
+    "Cours/GIT",
+    "Cours/Conterisation/IA.md",
+    "Cours/Conterisation/Cours 2VM.md",
+    "Cours/Conterisation/Cours 1.md",
+    "Cours/Conterisation",
+    "Cours/Conception Logiciel/UML.md",
+    "Cours/Conception Logiciel",
+    "Cours",
+    "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
+    "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
+    "Entreprise/Synapse/Doc/Datas to collect MCD.md",
+    "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
+    "Entreprise/Synapse/Doc",
+    "Entreprise/Projet perso",
+    "Entreprise/Synapse/Doc/Datas to collect MCD.md",
+    "Entreprise/Synapse/Doc/Datas to collect MLD.md",
+    "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
+    "Entreprise/Synapse/Doc",
+    "Entreprise/Classe CRM.md",
+>>>>>>> Stashed changes
+    "Untitled.canvas",
     "Intro cours/Cahier des charges_nathan_leo.md",
     "Entreprise",
     "Welcome.md",
