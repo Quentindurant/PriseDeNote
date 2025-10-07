@@ -72,3 +72,7 @@ GitFlow repose sur le workflow de création de branches repartie en plusieurs fo
 - limites :
 	- demande de la rigueur 
 
+# Changelog
+
+est une pratique consistant à conserver un fichier organisé par nous (les développeurs)
+qui répertorie toutes les modifications notables du projet
