@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
+                "file": "Cours/GIT/Cours de GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "COMPRENDRE LES ADVS mdr"
+              "title": "Cours de GIT"
             }
           },
           {
@@ -198,17 +198,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "de34936522f29625",
+  "active": "47844a97fb82e587",
   "lastOpenFiles": [
-    "Entreprise/Cahier des charges – CRM GC Développement.md",
+    "Cours/Conception Logiciel/UML.md",
+    "Cours/Expérience pro",
+    "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
+    "Entreprise/Synapse/Doc/Datas to collect MLD.md",
+    "Entreprise/Synapse/Doc/Datas to collect MCD.md",
+    "Entreprise/Synapse/Doc/Prise de note.md",
+    "Entreprise/Projet perso/Flowrun.md",
+    "Entreprise/Synapse/Cahier des charges - SYNAPSE.md",
+    "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
+    "Untitled.md",
     "Doc/Datas to collect MLD.md",
     "Doc/Datas to collect MCD.md",
     "Doc/Cahier des charges – CRM GC Développement.md",
     "Doc/COMPRENDRE LES ADVS mdr.md",
     "Doc",
     "Entreprise/Synapse",
-    "Entreprise/Synapse/Doc/Datas to collect MLD.md",
-    "Untitled.md",
     "Entreprise/Diagramme_Cas_Utilisation_CRMGC.drawio",
     "Cours/SQL/SQL RAPPEL.md",
     "Cours/SQL/Pasted image 20250916161757.png",
@@ -233,17 +240,8 @@
     "Cours/Conterisation/Cours 2VM.md",
     "Cours/Conterisation/Cours 1.md",
     "Cours/Conterisation",
-    "Cours/Conception Logiciel/UML.md",
     "Cours/Conception Logiciel",
     "Cours",
-    "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
-    "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
-    "Entreprise/Synapse/Doc/Datas to collect MCD.md",
-    "Entreprise/Synapse/Doc/COMPRENDRE LES ADVS mdr.md",
-    "Entreprise/Synapse/Doc",
-    "Entreprise/Synapse/Doc/Datas to collect MCD.md",
-    "Entreprise/Synapse/Doc/Datas to collect MLD.md",
-    "Entreprise/Synapse/Doc/Cahier des charges – CRM GC Développement.md",
     "Entreprise/Classe CRM.md",
     "Untitled.canvas",
     "Intro cours/Cahier des charges_nathan_leo.md"
