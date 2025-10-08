@@ -299,40 +299,166 @@ REQUETE DE BASE :
 - Sélectionner le nombre d’employés par département s’il est inférieur à 50000 : SELECT emp_no, dept_no FROM `dept_emp`WHERE emp_no < 50000; --44217
 - Sélectionner la moyenne des salaires par employé si elle est comprise entre 40000 et 50000 : SELECT AVG (salary) FROM `salaries` WHERE salary BETWEEN 40000 AND 50000; --1
 - Sélectionner la liste des employées en ordre alphabétique inversé de nom : SELECT first_name, last_name FROM `employees`ORDER BY last_name ASC; --299379
-- Sélectionner la liste des employés en ordre alphabétique inversé de nom et en ordre alphabétique par prénom
-- Sélectionner le nombre d’employés par département du plus petit au plus grand
-- Sélectionner le salaire maximum et minimum des employés, utiliser des alias
-- Sélectionner les 10 premiers employés
-- Sélectionner les noms et prénoms des 10 premiers employés, utiliser des alias
-- Sélectionner 10 employés à partir du 5ème
-- Sélectionner les noms et prénoms des 10 premiers employés en ordre alphabétique par nom
-- Sélectionner la somme des salaires pour les 10 premiers employés si la somme est inférieure à 50000
-- Sélectionner la somme des salaires par employés si leur numéro est compris entre 10001 et 50000 et la somme est inférieure à 50000
+- Sélectionner la liste des employés en ordre alphabétique inversé de nom et en ordre alphabétique par prénom : SELECT first_name, last_name
+FROM employees
+ORDER BY last_name DESC, first_name ASC; --299379
+- Sélectionner le nombre d’employés par département du plus petit au plus grand : SELECT dept_no, COUNT(*) AS nb_employees
+FROM dept_emp
+GROUP BY dept_no
+ORDER BY nb_employees ASC; --9
+
+- Sélectionner le salaire maximum et minimum des employés, utiliser des alias : SELECT MIN(salary) AS min_salary, MAX(salary) AS max_salary
+FROM salaries; --1
+- Sélectionner les 10 premiers employés SELECT *
+FROM employees
+ORDER BY emp_no
+LIMIT 10; --10
+
+- Sélectionner les noms et prénoms des 10 premiers employés, utiliser des alias : SELECT first_name AS prenom, last_name AS nom
+FROM employees
+ORDER BY emp_no
+LIMIT 10; --10
+- Sélectionner 10 employés à partir du 5ème : SELECT *
+FROM employees
+ORDER BY emp_no
+LIMIT 10 OFFSET 4; --10
+- Sélectionner les noms et prénoms des 10 premiers employés en ordre alphabétique par nom : SELECT first_name, last_name
+FROM employees
+ORDER BY last_name ASC, first_name ASC
+LIMIT 10; --10
+
+- Sélectionner la somme des salaires pour les 10 premiers employés si la somme est inférieure à 50000 : SELECT emp_no, SUM(salary) AS total_salary
+FROM salaries
+WHERE emp_no IN (
+  SELECT emp_no FROM employees ORDER BY emp_no LIMIT 10
+)
+GROUP BY emp_no
+HAVING SUM(salary) < 50000; --10
+- Sélectionner la somme des salaires par employés si leur numéro est compris entre 10001 et 50000 et la somme est inférieure à 50000 : SELECT emp_no, SUM(salary) AS total_salary
+FROM salaries
+WHERE emp_no BETWEEN 10001 AND 50000
+GROUP BY emp_no
+HAVING SUM(salary) < 50000; --591
+
 - Sélectionner la somme des salaires pour les 10 premiers employés si leur numéro est compris entre 10001 et 50000 et la somme est inférieure à 50000
+- SELECT emp_no, SUM(salary) AS total_salary
+FROM salaries
+WHERE emp_no IN (
+  SELECT emp_no
+  FROM employees
+  WHERE emp_no BETWEEN 10001 AND 50000
+  ORDER BY emp_no
+)
+GROUP BY emp_no
+HAVING SUM(salary) < 50000; --10
 - Sélectionner les employés et afficher les catégories de département (d001 = « Département n°1 », d002 = « Département n°2 », …, d009 = « Département n°9 » et s’il n’y a pas de département) si le numéro d’employé est compris entre 10150 et 10200
-- Sélectionner le nombre d’employés par département et afficher les catégories : supérieur à 50000 = « Élevé », supérieur ou égale à 20000 = « Correct », inférieur à 20000 = « Faible », utiliser des alias
-- Sélectionner les moyennes des salaires par employés et afficher les catégories : supérieur à 100000 = « Très élevée », supérieur ou égale à 80000 = « Élevée », inférieur à 80000 = « Faible », utiliser des alias
+- SELECT e.emp_no, e.first_name, e.last_name,
+       CASE d.dept_no
+         WHEN 'd001' THEN 'Département n°1'
+         WHEN 'd002' THEN 'Département n°2'
+         WHEN 'd003' THEN 'Département n°3'
+         WHEN 'd004' THEN 'Département n°4'
+         WHEN 'd005' THEN 'Département n°5'
+         WHEN 'd006' THEN 'Département n°6'
+         WHEN 'd007' THEN 'Département n°7'
+         WHEN 'd008' THEN 'Département n°8'
+         WHEN 'd009' THEN 'Département n°9'
+         ELSE 'Sans département'
+       END AS dept_label
+FROM employees e
+LEFT JOIN dept_emp de
+  ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+LEFT JOIN departments d
+  ON d.dept_no = de.dept_no
+WHERE e.emp_no BETWEEN 10150 AND 10200; --51
+
+- Sélectionner le nombre d’employés par département et afficher les catégories : supérieur à 50000 = « Élevé », supérieur ou égale à 20000 = « Correct », inférieur à 20000 = « Faible », utiliser des alias : SELECT d.dept_no,
+       d.dept_name,
+       COUNT(de.emp_no) AS nb_employees,
+       CASE
+         WHEN COUNT(de.emp_no) > 50000 THEN 'Élevé'
+         WHEN COUNT(de.emp_no) >= 20000 THEN 'Correct'
+         ELSE 'Faible'
+       END AS categorie
+FROM departments d
+LEFT JOIN dept_emp de
+  ON de.dept_no = d.dept_no AND de.to_date = '9999-01-01'
+GROUP BY d.dept_no, d.dept_name
+ORDER BY nb_employees ASC; --9
+- Sélectionner les moyennes des salaires par employés et afficher les catégories : supérieur à 100000 = « Très élevée », supérieur ou égale à 80000 = « Élevée », inférieur à 80000 = « Faible », utiliser des alias : j'y arrive pas j'ai un ![[Pasted image 20251008175817.png]]
 
 ### Requetes à faire obligatoirement avec des jointures
 
 [](https://github.com/kevinniel/MDS-2526-B3-DW-SQL#requetes-%C3%A0-faire-obligatoirement-avec-des-jointures)
 
-- Sélectionner les noms, prénoms et numéros des employés et leur département actuel (INNER JOIN)
-- Sélectionner les prénoms, noms et titres actuels des employés (INNER JOIN)
-- Sélectionner les noms, prénoms et salaires des employés en Juin 1989 (INNER JOIN)
-- Sélectionner les noms, prénoms et départements actuels des managers (INNER JOIN)
-- Sélectionner les noms, prénoms et dates de début d'emploi des employés avec leur département (INNER JOIN)
+- Sélectionner les noms, prénoms et numéros des employés et leur département actuel (INNER JOIN) : SELECT e.first_name, e.last_name, e.emp_no, d.dept_name
+FROM employees e
+INNER JOIN dept_emp de
+  ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+INNER JOIN departments d
+  ON d.dept_no = de.dept_no; --240124
+- Sélectionner les prénoms, noms et titres actuels des employés (INNER JOIN) : SELECT e.first_name, e.last_name, t.title
+FROM employees e
+JOIN titles t ON t.emp_no = e.emp_no AND t.to_date = '9999-01-01'; --240124
+- Sélectionner les noms, prénoms et salaires des employés en Juin 1989 (INNER JOIN) : SELECT e.first_name, e.last_name, s.salary
+FROM employees e
+JOIN salaries s ON s.emp_no = e.emp_no
+WHERE s.from_date <= '1989-06-30' AND s.to_date >= '1989-06-01'; --92030
+- Sélectionner les noms, prénoms et départements actuels des managers (INNER JOIN) : SELECT e.first_name, e.last_name, d.dept_name
+FROM dept_manager dm
+JOIN employees e  ON e.emp_no = dm.emp_no
+JOIN departments d ON d.dept_no = dm.dept_no
+WHERE dm.to_date = '9999-01-01'; -- 9
+- Sélectionner les noms, prénoms et dates de début d'emploi des employés avec leur département (INNER JOIN) : SELECT e.first_name, e.last_name, e.hire_date, d.dept_name
+FROM employees e
+JOIN dept_emp de ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+JOIN departments d ON d.dept_no = de.dept_no; --240124
 - Sélectionner les noms et départements des employés ayant le même département que les managers ayant été embauchés après le 1er Janvier 1996 (INNER JOIN et Sous-requêtes)
-- Sélectionner les employés et leur date d'embauche dans les départements où le salaire moyen est supérieur à 80000 (INNER JOIN et Sous-requêtes)
-- Sélectionner les employés et les départements (CROSS JOIN)
-- Sélectionner les postes actuels des employés avec les noms des départements (CROSS JOIN)
-- Sélectionner les dates d'emploi des employés et les noms des départements (JOIN et CROSS JOIN)
-- Sélectionner les noms, prénoms, dates d’embauche et départements des employés même s’ils n’ont pas de département associé (LEFT JOIN)
-- Sélectionner les noms, prénoms et titres des employés même s’ils n’ont pas de titre associé (LEFT JOIN)
-- Sélectionner les noms, prénoms et salaires des employés depuis 1985 (LEFT JOIN)
-- Sélectionner les noms, prénoms et départements des employés même s’ils n’ont pas de département associé (RIGHT JOIN)
-- Sélectionner les noms, prénoms et salaires des employés depuis 1985 (RIGHT JOIN)
-- Sélectionner les noms, prénoms et titres des employés même s’ils n’ont pas de titre associé (RIGHT JOIN)
+- Sélectionner les employés et leur date d'embauche dans les départements où le salaire moyen est supérieur à 80000 (INNER JOIN et Sous-requêtes) : SELECT e.emp_no, e.first_name, e.last_name, e.hire_date, d.dept_name
+FROM employees e
+JOIN dept_emp de ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+JOIN departments d ON d.dept_no = de.dept_no
+WHERE d.dept_no IN (
+  SELECT de2.dept_no
+  FROM dept_emp de2
+  JOIN salaries s ON s.emp_no = de2.emp_no
+  WHERE de2.to_date = '9999-01-01'
+  GROUP BY de2.dept_no
+  HAVING AVG(s.salary) > 80000
+); --37701
+- Sélectionner les employés et les départements (CROSS JOIN) : SELECT e.emp_no, d.dept_no
+FROM employees e
+CROSS JOIN departments d; --2700216
+- Sélectionner les postes actuels des employés avec les noms des départements (CROSS JOIN) : SELECT t.title, d.dept_name
+FROM titles t
+CROSS JOIN departments d
+WHERE t.to_date = '9999-01-01'; --2161116
+- Sélectionner les dates d'emploi des employés et les noms des départements (JOIN et CROSS JOIN) : SELECT e.emp_no, de.from_date, de.to_date, d.dept_name
+FROM dept_emp de
+JOIN departments d ON d.dept_no = de.dept_no
+JOIN employees  e ON e.emp_no = de.emp_no; --331603
+- Sélectionner les noms, prénoms, dates d’embauche et départements des employés même s’ils n’ont pas de département associé (LEFT JOIN) : SELECT e.first_name, e.last_name, e.hire_date, d.dept_name
+FROM employees e
+LEFT JOIN dept_emp de ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+LEFT JOIN departments d ON d.dept_no = de.dept_no; --300024
+- Sélectionner les noms, prénoms et titres des employés même s’ils n’ont pas de titre associé (LEFT JOIN) : SELECT e.first_name, e.last_name, t.title
+FROM employees e
+LEFT JOIN titles t ON t.emp_no = e.emp_no AND t.to_date = '9999-01-01'; --300024
+- Sélectionner les noms, prénoms et salaires des employés depuis 1985 (LEFT JOIN) : SELECT e.first_name, e.last_name, s.salary, s.from_date, s.to_date
+FROM employees e
+LEFT JOIN salaries s ON s.emp_no = e.emp_no
+WHERE s.to_date >= '1985-01-01'; --2844047
+- Sélectionner les noms, prénoms et départements des employés même s’ils n’ont pas de département associé (RIGHT JOIN) : SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+RIGHT JOIN dept_emp de ON de.emp_no = e.emp_no AND de.to_date = '9999-01-01'
+RIGHT JOIN departments d ON d.dept_no = de.dept_no; --331603
+- Sélectionner les noms, prénoms et salaires des employés depuis 1985 (RIGHT JOIN): SELECT e.first_name, e.last_name, s.salary, s.from_date, s.to_date
+FROM employees e
+RIGHT JOIN salaries s ON s.emp_no = e.emp_no
+WHERE s.to_date >= '1985-01-01'; --2844047
+- Sélectionner les noms, prénoms et titres des employés même s’ils n’ont pas de titre associé (RIGHT JOIN): SELECT e.first_name, e.last_name, t.title
+FROM employees e
+RIGHT JOIN titles t ON t.emp_no = e.emp_no AND t.to_date = '9999-01-01';--443308
 
 ### Requetes à faire obligatoirement avec des sous-requetes
 
