@@ -128,8 +128,6 @@ On part du principe que l'on vient de créer un repository tout neuf. Les étape
 
 ### Pour la réalisation d'un hotfix
 
-[](https://github.com/kevinniel/MDS-2526-B3-GIT_CICD/blob/main/gitflow.md#pour-la-r%C3%A9alisation-dun-hotfix)
-
 1. On corrige un bug sur la branche `main`:
     - Faire une branche `hotfix/vX.Y.Z` pour la fonctionnalité à développer
     - Merger la branche `hotfix/vX.Y.Z` sur la branch `main` & `develop`
