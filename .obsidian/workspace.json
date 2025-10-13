@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/SQL/MLD.md",
+                "file": "Cours/GIT/Cours de GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MLD"
+              "title": "Cours de GIT"
             }
           },
           {
@@ -185,8 +185,8 @@
   },
   "active": "883bc39cddfed75d",
   "lastOpenFiles": [
-    "Untitled.base",
     "Cours/SQL/MLD.md",
+    "Untitled.base",
     "Cours/SQL/Conception de BDD.md",
     "Cours/SQL/SQL RAPPEL.md",
     "Cours/SQL/TP3 SQL.md",
