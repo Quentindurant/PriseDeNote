@@ -1,5 +1,5 @@
 
-- Créer 2 tables, avec 4 colonnes chacunes : ![Créer 2 tables, avec 4 colonnes chacunes](Pasted image 20251029142608.png)
+- Créer 2 tables, avec 4 colonnes chacunes : ![Insert 5M](./Pasted%20image%2020251029142854.png)
 - 1 relation de la table A vers la table B : 
 - 1 colonne devra être un boolean randomisé vrai/faux :
 - 2 colonnes noms / prénoms ( je select from pour vérifier le resultat) :
