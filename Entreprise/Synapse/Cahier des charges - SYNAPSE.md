@@ -122,7 +122,7 @@ L’outil CRM **SYNAPSE** vise à centraliser l’ensemble des activités de sup
 ---
 
 ## TECHNOLOGIES
-- **LARAVEL** (Framework PHP relationnel à la BDD)  
+- **Nest.JS (Framework JS relationnel à la BDD)  
 - **React + Next.JS / React Native** (UX, UI)  
 - **PostgreSQL** (BDD)  
 

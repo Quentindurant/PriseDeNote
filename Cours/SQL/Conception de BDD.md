@@ -10,7 +10,6 @@ Note : On peut aussi schématisé une base de données avec l'UML, mais ce n'est
 
 ## Etape 1 : Dictionnaire des données
 
-[](https://github.com/kevinniel/MDS-2526-B3-DW-SQL/blob/main/Conception.md#etape-1--dictionnaire-des-donn%C3%A9es)
 
 Il regroupe les informations que vous souhaitez stocker, dont vous vous servirez pour établir vos MCD, MLD & MPD. Ce tableau est évolutif.
 
@@ -69,3 +68,5 @@ Dans l'exemple ci-dessous, il faut lire :
 
 
 ## Etape 4 : MPD Modèle Phyisique de Données
+
+
