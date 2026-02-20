@@ -65,3 +65,10 @@ $$ LANGUAGE plpgsql;
     - `$$` marque la fin du corps de la fonction.
         
     - `LANGUAGE plpgsql` précise que la fonction est écrite en PL/pgSQL (le langage procédural de PostgreSQL, proche de PL/SQL d’Oracle).
+
+
+
+Stack :
+ADSO (Architecture distribuer orienter services)
+nest : mvc
+next : mvvm (s'en rapproche)
